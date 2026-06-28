@@ -1,0 +1,2 @@
+pip install azure-cognitiveservices-speech
+pip install azure-ai-translation-text azure-identity 
