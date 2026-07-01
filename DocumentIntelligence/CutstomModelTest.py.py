@@ -5,10 +5,10 @@ from dotenv import load_dotenv
 import os
 
 # SampleForm/Form_1.jpg, Form_2.jpg, Form_3.jpg, Form_4.jpg, Form_5.jpg 
-# are used in training on document intelligence portal
+# are stored in storage account
+# are used in training on document intelligence portal, 
 
 def main():
-
     # Clear the console
     os.system('cls' if os.name=='nt' else 'clear')
 
