@@ -4,6 +4,7 @@ from fastapi.responses import Response
 from pydantic import BaseModel
 
 from ModelDeployment import generate_response
+from ShopNowAIAssistat import generate_response_from_agents
 
 app = FastAPI(title="Chatbot API", version="1.0")
 
@@ -46,7 +47,7 @@ async def chat(request: ChatRequest) -> ChatResponse:
     if not request.message.strip():
         raise HTTPException(status_code=400, detail="Message cannot be empty")
 
-    reply = generate_response(request.message)
+    reply = generate_response_from_agents(request.message)
     return ChatResponse(response=reply)
 
 
