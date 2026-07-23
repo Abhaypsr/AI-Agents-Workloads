@@ -18,7 +18,6 @@ def build_search_client() -> SearchClient:
     query_key = os.getenv("QUERY_KEY")
     use_aad = os.getenv("USE_AZURE_AD", "false").lower() == "true"
     index_name = os.getenv("INDEX_NAME", INDEX_NAME_DEFAULT)
-    # api_version = os.getenv("SEARCH_API_VERSION", "2023-07-01")
 
     if query_key:
         credential = AzureKeyCredential(query_key)
